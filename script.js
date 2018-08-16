@@ -19,10 +19,10 @@ onLoad = () => {
     console.log('*-*-*-* Chosen Word:', gameInstance.word, '*-*-*-*')
     printToDom(gameInstance.attemptsRemaining, '.attempts-remaining', 'string')
     printToDom(gameInstance.wrongLetters, '.wrong-letters', 'string')
-    generateBlankArray(gameInstance.word)
+    generateBlankArray()
 }
 
-generateBlankArray = (word) => {
+generateBlankArray = () => {
     gameInstance.wordInArray = gameInstance.word.split('')
     for (let i = 0; i < gameInstance.wordInArray.length; i++) {
         gameInstance.inProcessWordArray[i] = '_'
@@ -62,7 +62,7 @@ checkEndFailure = () => {
 }
 
 checkEndWin = () => {
-    if(gameInstance.inProcessWordArray.indexOf('_') < 0){
+    if (gameInstance.inProcessWordArray.indexOf('_') < 0) {
         gameInstance.gamesWon += 1
         let countdown = 4;
         let interval = setInterval(function(){
