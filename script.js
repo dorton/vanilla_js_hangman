@@ -39,7 +39,7 @@ document.onkeyup = (event) => {
 }
 
 checkWordForLetter = (letter) =>{
-    // avoids initial load bug where 'Meta' counts as a wrong guess 
+    // avoids initial load bug where 'Meta' counts as a wrong guess
     if (letter === 'Meta') { return }
     let letterFound = false
     for(let i = 0; i < gameInstance.wordInArray.length; i++){

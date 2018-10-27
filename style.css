@@ -1,9 +1,94 @@
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .winning-word {
-    font-weight: bold;
-    font-size: 24px;
-    text-transform: capitalize;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.main {
+  grid-area: main;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-areas: "header" "sidebar" "main" "footer"
+}
+
+@media only screen and (min-width: 500px) {
+  .wrapper {
+    grid-template-columns: 5fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas: "header   header" "main sidebar" "footer   footer";
+  }
+  .subBox {
+    grid-column: col 3 / span 2;
+    grid-row: row 2;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 2fr;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .wrapper {
+    grid-gap: 15px;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: "header  header  header" "sidebar main main" "footer  footer  footer";
+  }
+  .subBox {
+    grid-column: col 3 / span 2;
+    grid-row: row 2;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 2fr;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .wrapper {
+    grid-gap: 15px;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-areas: "sidebar main main" "header main main" "footer  main  main";
+  }
+  .subBox {
+    grid-column: col 3 / span 2;
+    grid-row: row 2;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.subBox {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+.box .box {
+  background-color: #ccc;
+  color: #444;
 }

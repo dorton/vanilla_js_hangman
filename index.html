@@ -12,12 +12,19 @@
 </head>
 
 <body>
-    <h1>Hangman Demo</h1>
-    <div class='failure'></div><br />
-    <div class='word'></div><br />
-    <div>Wrong letters guessed: <span class='bold wrong-letters'></span></div><br />
-    <div>Number of attempts remaining: <span class='bold attempts-remaining'></span></div><br />
-    <div>Number of wins: <span class=' bold wins'>0</span></div>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Hangman Demo</h1>
+        </div>
+        <div class="main">
+            <div class='failure'></div><br />
+            <div class='word box'></div><br />
+            <div class='box'>Wrong letters guessed: <span class='bold wrong-letters'></span></div><br />
+            <div class='box'>Number of attempts remaining: <span class='bold attempts-remaining'></span></div><br />
+            <div class='box'>Number of wins: <span class=' bold wins'>0</span></div>
+        </div>
+        <div class="footer"></div>
+    </div>
 </body>
 <script type="text/javascript" src="./script.js"></script>
 
